@@ -1,150 +1,163 @@
-* {
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
+/* HEADER */
+
+.header{
+
+  width:100%;
+  height:95px;
+
+  padding:0 8%;
+
+  position:fixed;
+  top:0;
+  left:0;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  background:rgba(255,255,255,.75);
+
+  backdrop-filter:blur(14px);
+
+  border-bottom:1px solid rgba(0,0,0,.05);
+
+  z-index:1000;
 }
 
-body {
-    font-family: 'Montserrat', sans-serif;
-    background-color:#f8f5f0;
+/* LOGO */
+
+.logo{
+  display:flex;
+  flex-direction:column;
+}
+
+.logo h1{
+
+  font-family:'Cormorant Garamond', serif;
+
+  font-size:32px;
+  font-weight:600;
+
+  color:#2d2d2d;
+
+  letter-spacing:2px;
+}
+
+.logo span{
+
+  font-size:11px;
+
+  color:#9a8465;
+
+  letter-spacing:2px;
+  text-transform:uppercase;
+
+  margin-top:4px;
 }
 
 /* NAVBAR */
-header {
-    width:100%;
-    padding:25px 8%;
-    position:fixed;
-    top:0; 
-    left:0; 
-    z-index:1000; 
-    background:rgba(255,255,255,0.75); backdrop-filter: blur(10px); 
-    display:flex; 
-    align-items:center; justify-content:space-between; 
-    border-bottom:1px solid rgba(0,0,0,0.05); 
+
+.navbar{
+
+  display:flex;
+  align-items:center;
+
+  gap:40px;
 }
 
-/* LOGO */ 
-.logo { 
-    display:flex; 
-    flex-direction:column; 
-} 
+.navbar a{
 
-.logo h1 { 
-    font-family:'Cormorant Garamond', serif; font-size:38px; 
-    font-weight:600; 
-    color:#2d2d2d; 
-    letter-spacing:2px; 
-    line-height:35px; 
-} 
+  text-decoration:none;
 
-.logo span { 
-    font-size:11px; 
-    letter-spacing:2px; 
-    color:#8a7a67; 
-    margin-top:5px; 
+  color:#444;
+
+  font-size:14px;
+  font-weight:500;
+
+  position:relative;
+
+  transition:.3s;
 }
 
-/* MENU */ 
-nav ul { 
-    display:flex; 
-    gap:35px; 
-    list-style:none; 
-} 
+.navbar a::after{
 
-nav a { 
-    text-decoration:none; 
-    color:#3a3a3a; 
-    font-size:14px; 
-    letter-spacing:1px; 
-    transition:0.3s; 
-    position:relative; 
-} 
+  content:'';
 
-nav a::after { 
-    content:''; 
-    position:absolute; 
-    left:0; 
-    bottom:-5px; 
-    width:0%; 
-    height:1px; 
-    background:#c7a86b; 
-    transition:0.3s; 
-} 
+  position:absolute;
 
-nav a:hover { 
-    color:#c7a86b; 
-} 
+  left:0;
+  bottom:-6px;
 
-nav a:hover::after { 
-    width:100%; 
+  width:0%;
+  height:1px;
+
+  background:#c8a76f;
+
+  transition:.4s;
 }
 
-/* HERO */ 
-.hero { 
-    height:100vh; 
-    background: 
-    linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2070'); 
-    background-size:cover; 
-    background-position:center; 
-    display:flex; 
-    align-items:center; 
-    padding:0 8%; 
-} 
+.navbar a:hover{
 
-.hero-content { 
-    max-width:650px; 
-    color:white; 
+  color:#c8a76f;
 }
 
-.hero h2 { 
-    font-family:'Cormorant Garamond', serif; 
-    font-size:72px; 
-    line-height:78px; 
-    margin-bottom:20px; 
-    font-weight:500; 
-} 
+.navbar a:hover::after{
 
-.hero p { 
-    font-size:18px; 
-    line-height:32px; 
-    color:#f0f0f0; 
-    margin-bottom:35px; 
-} 
-
-.hero button { 
-    padding:15px 35px; 
-    border:none; 
-    background:#c7a86b; 
-    color:white; 
-    font-size:14px; 
-    letter-spacing:1px; 
-    cursor:pointer; 
-    transition:0.3s; 
+  width:100%;
 }
 
-.hero button:hover { 
-    background:#b79557; 
-} 
+/* BOTÃO */
 
-/* RESPONSIVO */ 
-@media(max-width:900px) { 
-    header { 
-        flex-direction:column; 
-        gap:20px; 
-    } 
-    
-    nav ul { 
-        gap:20px; 
-        flex-wrap:wrap; 
-        justify-content:center; 
-    } 
-    
-    .hero h2 { 
-        font-size:48px; 
-        line-height:55px; 
-    } 
-    
-    .hero p { 
-        font-size:16px; 
-    } 
+.nav-btn{
+
+  text-decoration:none;
+
+  padding:14px 28px;
+
+  border-radius:50px;
+
+  background:#c8a76f;
+  color:white;
+
+  font-size:14px;
+
+  transition:.4s;
+}
+
+.nav-btn:hover{
+
+  transform:translateY(-3px);
+
+  background:#b9965f;
+}
+
+/* RESPONSIVO */
+
+@media(max-width:950px){
+
+  .navbar{
+    display:none;
+  }
+
+  .logo span{
+    display:none;
+  }
+
+}
+
+@media(max-width:600px){
+
+  .header{
+    padding:0 20px;
+  }
+
+  .logo h1{
+    font-size:24px;
+  }
+
+  .nav-btn{
+    padding:12px 22px;
+    font-size:13px;
+  }
+
 }

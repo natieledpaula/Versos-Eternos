@@ -1,50 +1,1060 @@
+<!--
+SITE PREMIUM — VERSOS ETERNOS
+Visual inspirado exatamente no layout enviado
+Design profissional + responsivo + animações + efeitos modernos
+-->
+
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Versos Eternos</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="src/styles/navbar.css">
+<title>Versos Eternos</title>
 
-    <!-- Fonte elegante -->
-    <link rel="preconnect" href="https://fonts.googleapis.com"> 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Dancing+Script:wght@500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+/* =========================
+RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f8f5ef;
+    color:#2d2723;
+    font-family:'Jost',sans-serif;
+    overflow-x:hidden;
+}
+
+/* =========================
+COLORS
+========================= */
+
+:root{
+
+    --gold:#b88b4a;
+    --gold2:#d8bc8b;
+
+    --cream:#f8f5ef;
+    --card:#efe6d7;
+
+    --text:#2b2521;
+    --light:#756a61;
+
+    --shadow:0 15px 40px rgba(0,0,0,0.08);
+
+}
+
+/* =========================
+GLOBAL
+========================= */
+
+.container{
+
+    width:90%;
+    max-width:1250px;
+    margin:auto;
+
+}
+
+.title-small{
+
+    color:var(--gold);
+
+    font-size:13px;
+    letter-spacing:4px;
+    text-transform:uppercase;
+
+    margin-bottom:12px;
+
+}
+
+.section-title{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:70px;
+    font-weight:500;
+
+    line-height:70px;
+
+}
+
+/* =========================
+HEADER
+========================= */
+
+header{
+
+    width:100%;
+    height:95px;
+
+    position:fixed;
+    top:0;
+
+    background:rgba(248,245,239,0.95);
+
+    backdrop-filter:blur(12px);
+
+    z-index:999;
+
+    border-bottom:1px solid rgba(0,0,0,0.05);
+
+}
+
+.navbar{
+
+    width:90%;
+    max-width:1250px;
+
+    height:100%;
+
+    margin:auto;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+}
+
+.logo h1{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:52px;
+    line-height:38px;
+
+    font-weight:600;
+
+}
+
+.logo span{
+
+    color:var(--gold);
+
+}
+
+.logo p{
+
+    margin-top:6px;
+
+    font-size:10px;
+    letter-spacing:2px;
+
+    color:#6e655d;
+
+}
+
+nav{
+
+    display:flex;
+    gap:45px;
+
+}
+
+nav a{
+
+    text-decoration:none;
+
+    color:#2b2521;
+
+    font-size:13px;
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    position:relative;
+
+}
+
+nav a::after{
+
+    content:'';
+
+    width:0%;
+    height:1px;
+
+    background:var(--gold);
+
+    position:absolute;
+    left:0;
+    bottom:-7px;
+
+    transition:.4s;
+
+}
+
+nav a:hover::after{
+
+    width:100%;
+
+}
+
+.instagram{
+
+    width:42px;
+    height:42px;
+
+    border-radius:50%;
+
+    border:1px solid rgba(184,139,74,0.4);
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    transition:.3s;
+
+    cursor:pointer;
+
+}
+
+.instagram:hover{
+
+    background:var(--gold);
+    color:white;
+
+}
+
+/* =========================
+HERO
+========================= */
+
+.hero{
+
+    width:100%;
+    height:100vh;
+
+    background:
+    linear-gradient(to right, rgba(0,0,0,0.70), rgba(0,0,0,0.15)),
+    url('https://images.unsplash.com/photo-1504052434569-70ad5836ab65?q=80&w=1800&auto=format&fit=crop');
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    align-items:center;
+
+    margin-top:95px;
+
+}
+
+.hero-content{
+
+    width:90%;
+    max-width:1250px;
+
+    margin:auto;
+
+    color:white;
+
+}
+
+.hero-content h1{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:95px;
+    line-height:95px;
+
+    font-weight:500;
+
+}
+
+.hero-content h2{
+
+    font-family:'Dancing Script',cursive;
+
+    font-size:75px;
+
+    color:#e7c58d;
+
+    font-weight:500;
+
+    margin-top:10px;
+
+}
+
+.hero-heart{
+
+    margin:25px 0;
+
+    font-size:24px;
+
+    color:#e7c58d;
+
+}
+
+.hero button{
+
+    padding:18px 38px;
+
+    border:none;
+    border-radius:4px;
+
+    background:var(--gold);
+
+    color:white;
+
+    font-size:13px;
+    letter-spacing:2px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.hero button:hover{
+
+    background:#9d7238;
+    transform:translateY(-4px);
+
+}
+
+/* =========================
+ABOUT
+========================= */
+
+.about{
+
+    padding:120px 0;
+
+}
+
+.about-grid{
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+
+    gap:70px;
+    align-items:center;
+
+}
+
+.about-image{
+
+    position:relative;
+
+}
+
+.about-image img{
+
+    width:100%;
+    height:500px;
+
+    object-fit:cover;
+
+    border-radius:18px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.about-text p{
+
+    color:var(--light);
+
+    line-height:36px;
+
+    font-size:18px;
+
+    margin-top:20px;
+
+}
+
+/* =========================
+VERSE
+========================= */
+
+.verse-section{
+
+    padding-bottom:100px;
+
+}
+
+.verse-grid{
+
+    display:grid;
+    grid-template-columns:1.3fr .7fr;
+
+    gap:35px;
+
+}
+
+.verse-card{
+
+    background:#f3ece1;
+
+    border-radius:20px;
+
+    padding:60px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+}
+
+.verse-card h3{
+
+    color:var(--gold);
+
+    letter-spacing:4px;
+
+    font-size:14px;
+
+}
+
+.verse-card h2{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:55px;
+    line-height:65px;
+
+    font-weight:500;
+
+    margin:30px 0 20px;
+
+}
+
+.verse-card p{
+
+    color:var(--gold);
+
+    font-size:22px;
+
+}
+
+.cross{
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    position:relative;
+
+    box-shadow:var(--shadow);
+
+}
+
+.cross img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+/* =========================
+REFLECTION
+========================= */
+
+.reflection{
+
+    padding-bottom:100px;
+
+}
+
+.reflection-box{
+
+    background:linear-gradient(to right,#f1dfc3,#f6ede0);
+
+    border-radius:18px;
+
+    padding:35px 50px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    gap:30px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.reflection-title{
+
+    font-family:'Dancing Script',cursive;
+
+    color:var(--gold);
+
+    font-size:58px;
+
+    white-space:nowrap;
+
+}
+
+.reflection-text{
+
+    color:#5d534b;
+
+    font-size:19px;
+
+    line-height:35px;
+
+}
+
+/* =========================
+BOOKS
+========================= */
+
+.books{
+
+    padding-bottom:100px;
+
+}
+
+.books-header{
+
+    text-align:center;
+
+    margin-bottom:50px;
+
+}
+
+.book-grid{
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+}
+
+.book{
+
+    background:white;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow);
+
+    transition:.4s;
+
+}
+
+.book:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.book img{
+
+    width:100%;
+    height:320px;
+
+    object-fit:cover;
+
+}
+
+.book-content{
+
+    padding:30px;
+
+}
+
+.book-content h3{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:38px;
+
+    font-weight:500;
+
+    margin-bottom:15px;
+
+}
+
+.book-content p{
+
+    color:#6c635c;
+
+    line-height:30px;
+
+    margin-bottom:25px;
+
+}
+
+.book-content button{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    background:var(--gold);
+
+    color:white;
+
+    letter-spacing:2px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.book-content button:hover{
+
+    background:#9d7238;
+
+}
+
+/* =========================
+INSTAGRAM
+========================= */
+
+.instagram-section{
+
+    padding-bottom:100px;
+
+}
+
+.instagram-box{
+
+    background:
+    linear-gradient(rgba(248,245,239,0.92),rgba(248,245,239,0.92)),
+    url('https://images.unsplash.com/photo-1527689368864-3a821dbccc34?q=80&w=1200&auto=format&fit=crop');
+
+    background-size:cover;
+
+    border-radius:25px;
+
+    padding:70px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+}
+
+.instagram-box h2{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:70px;
+
+    font-weight:500;
+
+}
+
+.instagram-box p{
+
+    margin:20px 0;
+
+    color:#665d56;
+
+    font-size:20px;
+
+}
+
+.instagram-box a{
+
+    color:var(--gold);
+
+    text-decoration:none;
+
+    font-family:'Dancing Script',cursive;
+
+    font-size:50px;
+
+}
+
+/* =========================
+FOOTER
+========================= */
+
+footer{
+
+    background:#1f1814;
+
+    color:#dcc7a5;
+
+    text-align:center;
+
+    padding:28px;
+
+    font-size:14px;
+
+}
+
+/* =========================
+ANIMATION
+========================= */
+
+.fade{
+
+    opacity:0;
+    transform:translateY(40px);
+
+    transition:1s;
+
+}
+
+.fade.show{
+
+    opacity:1;
+    transform:translateY(0);
+
+}
+
+/* =========================
+RESPONSIVE
+========================= */
+
+@media(max-width:1000px){
+
+    nav{
+        display:none;
+    }
+
+    .hero-content h1{
+
+        font-size:60px;
+        line-height:65px;
+
+    }
+
+    .hero-content h2{
+
+        font-size:50px;
+
+    }
+
+    .about-grid,
+    .verse-grid,
+    .book-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .reflection-box{
+
+        flex-direction:column;
+        text-align:center;
+
+    }
+
+    .section-title{
+
+        font-size:50px;
+        line-height:55px;
+
+    }
+
+}
+
+</style>
 </head>
+
 <body>
-    <!-- NAVBAR -->
-    <header>
-        <div class="logo">
-            <h1>VERSOS <br> ETERNOS</h1>
-            <span>PALAVRAS QUE APROXIMAM DE DEUS</span>
-        </div>
 
-        <nav>
-            <ul>
-                <li><a href="#">Início</a></li>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Versículos</a></li>
-                <li><a href="#">Reflexões</a></li>
-                <li><a href="#">Livros</a></li>
-                <li><a href="#">Redes Sociais</a></li>
-            </ul>
-        </nav>
-    </header>
+<!-- HEADER -->
 
-    <!-- Hero-->
-    <section class="hero">
-        <div class="hero-content">
-            <h2>
-                Deus continua cuidando de você,
-                mesmo nos dias silenciosos.
-            </h2>
+<header>
 
-            <p>Um lugar de paz, esperança e fé através da palavra de Deus ✨</p>
+<div class="navbar">
 
-            <button>Ler Reflexão</button>
-        </div>
-    </section>
+<div class="logo">
+
+<h1>VERSOS<br><span>ETERNOS</span></h1>
+
+<p>PALAVRAS QUE APROXIMAM CORAÇÕES DE DEUS.</p>
+
+</div>
+
+<nav>
+
+<a href="#">INÍCIO</a>
+<a href="#">SOBRE</a>
+<a href="#">VERSÍCULO</a>
+<a href="#">LIVROS</a>
+<a href="#">INSTAGRAM</a>
+
+</nav>
+
+<div class="instagram">
+✦
+</div>
+
+</div>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-content fade">
+
+<h1>
+Deus continua
+cuidando de você,
+</h1>
+
+<h2>
+mesmo nos dias silenciosos.
+</h2>
+
+<div class="hero-heart">♡</div>
+
+<button>
+LER REFLEXÃO
+</button>
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section class="about">
+
+<div class="container about-grid fade">
+
+<div class="about-image">
+
+<img src="https://images.unsplash.com/photo-1527689368864-3a821dbccc34?q=80&w=1200&auto=format&fit=crop">
+
+</div>
+
+<div class="about-text">
+
+<div class="title-small">
+SOBRE O
+</div>
+
+<h2 class="section-title">
+Versos Eternos
+</h2>
+
+<p>
+O Versos Eternos nasceu com o propósito de levar paz,
+esperança e conforto através da Palavra de Deus.
+Compartilhamos versículos, reflexões e mensagens
+para ajudar pessoas em momentos difíceis e lembrar
+que nunca estamos sozinhos.
+</p>
+
+<p>
+Mais do que frases, queremos transmitir amor,
+fé e esperança para cada coração que passar por aqui.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- VERSE -->
+
+<section class="verse-section">
+
+<div class="container verse-grid fade">
+
+<div class="verse-card">
+
+<h3>VERSÍCULO DO DIA ♡</h3>
+
+<h2>
+Porque sou eu que conheço os planos
+que tenho para vocês.
+</h2>
+
+<p>
+Jeremias 29:11
+</p>
+
+</div>
+
+<div class="cross">
+
+<img src="https://images.unsplash.com/photo-1507692049790-de58290a4334?q=80&w=1200&auto=format&fit=crop">
+
+</div>
+
+</div>
+
+</section>
+
+<!-- REFLECTION -->
+
+<section class="reflection">
+
+<div class="container fade">
+
+<div class="reflection-box">
+
+<div class="reflection-title">
+♡ Reflexão
+</div>
+
+<div class="reflection-text">
+“Nem todo silêncio significa ausência de Deus.
+Às vezes, Ele está preparando algo maior
+do que podemos imaginar.”
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- BOOKS -->
+
+<section class="books">
+
+<div class="container fade">
+
+<div class="books-header">
+
+<div class="title-small">
+LIVROS PARA SUA CAMINHADA
+</div>
+
+<h2 class="section-title">
+Livros inspiradores
+</h2>
+
+</div>
+
+<div class="book-grid">
+
+<div class="book">
+
+<img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?q=80&w=1200&auto=format&fit=crop">
+
+<div class="book-content">
+
+<h3>Café com Deus Pai</h3>
+
+<p>
+Um devocional transformador para fortalecer sua caminhada com Deus.
+</p>
+
+<button>SAIBA MAIS</button>
+
+</div>
+
+</div>
+
+<div class="book">
+
+<img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?q=80&w=1200&auto=format&fit=crop">
+
+<div class="book-content">
+
+<h3>Uma Vida com Propósitos</h3>
+
+<p>
+Descubra o propósito que Deus preparou especialmente para você.
+</p>
+
+<button>SAIBA MAIS</button>
+
+</div>
+
+</div>
+
+<div class="book">
+
+<img src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?q=80&w=1200&auto=format&fit=crop">
+
+<div class="book-content">
+
+<h3>O Peregrino</h3>
+
+<p>
+Uma jornada cristã inspiradora que impacta gerações.
+</p>
+
+<button>SAIBA MAIS</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- INSTAGRAM -->
+
+<section class="instagram-section">
+
+<div class="container fade">
+
+<div class="instagram-box">
+
+<h2>@versoseternos</h2>
+
+<p>
+Acompanhe mensagens, versículos e reflexões diariamente.
+</p>
+
+<a href="#">
+Leve uma palavra de fé para o seu dia ♡
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+♡ © 2026 Versos Eternos — Feito com fé e amor. ♡
+
+</footer>
+
+<!-- JS -->
+
+<script>
+
+const observer = new IntersectionObserver((entries)=>{
+
+entries.forEach((entry)=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add('show')
+
+}
+
+})
+
+})
+
+document.querySelectorAll('.fade').forEach((el)=>observer.observe(el))
+
+</script>
+
 </body>
 </html>
